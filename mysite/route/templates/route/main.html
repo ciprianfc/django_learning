@@ -1,0 +1,22 @@
+<h1>Using the url tag</h1>
+<ul>
+    <li>
+        <a href="/route/second-view"> hard-coded</a> (not DRY)
+    </li>
+    <li>
+        {% url 'route:first-view' %}
+        (url 'route:first-view')
+    </li>
+    <li>
+        <a href="{% url 'route:second-view' %}">
+            url 'route:second-view'
+        </a>
+    </li>
+
+</ul>
+
+<p>
+    <a href="https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#url" target="_blank">
+        Documentation
+    </a>
+</p>
