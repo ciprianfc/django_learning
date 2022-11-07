@@ -1,0 +1,12 @@
+<p>Guessing game</p>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<form method="post">
+    <p>
+        <label for="guess">Input guess</label>
+        {% csrf_token %}
+        <input type="text" name="guess" id="guess" size="40" />
+    </p>
+    <input type="submit">
+</form>

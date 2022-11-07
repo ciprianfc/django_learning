@@ -20,5 +20,6 @@ urlpatterns = [
     path('', include('gview.urls')),
     path('admin/', admin.site.urls),
     path('route/', include('route.urls', namespace='nsroutes')), 
+    path('getpost/', include('getpost.urls')),
     # path('gview/', include('gview.urls')),
 ]
