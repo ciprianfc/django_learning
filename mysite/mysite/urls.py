@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('route.urls')),
+    path('', include('gview.urls')),
     path('admin/', admin.site.urls),
-    path('route/', include('route.urls', namespace='nsroutes')) 
+    path('route/', include('route.urls', namespace='nsroutes')), 
+    # path('gview/', include('gview.urls')),
 ]

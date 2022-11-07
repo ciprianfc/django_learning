@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #extensions
+    'django_extensions', #needed to run scripts
+
     #sample applications
     'route.apps.RouteConfig',
+    'gview.apps.GviewConfig',
 ]
 
 MIDDLEWARE = [
