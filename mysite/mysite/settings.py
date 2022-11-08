@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'route.apps.RouteConfig',
     'gview.apps.GviewConfig',
     'getpost.apps.GetpostConfig',
-    'session.apps.SessionConfig'
+    'session.apps.SessionConfig',
+    'bookone.apps.BookoneConfig',
     
 ]
 
