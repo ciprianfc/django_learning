@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     #sample applications
     'route.apps.RouteConfig',
     'gview.apps.GviewConfig',
-    'getpost.apps.GetpostConfig'
+    'getpost.apps.GetpostConfig',
+    'session.apps.SessionConfig'
+    
 ]
 
 MIDDLEWARE = [
