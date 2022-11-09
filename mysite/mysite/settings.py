@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'getpost.apps.GetpostConfig',
     'session.apps.SessionConfig',
     'bookone.apps.BookoneConfig',
-    'cats.apps.CatsConfig'    
+    'cats.apps.CatsConfig',
+    'hello.apps.HelloConfig',
+    'home.apps.HomeConfig',  
 ]
 
 MIDDLEWARE = [

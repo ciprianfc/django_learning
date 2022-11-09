@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('gview.urls')),
+    path('', include('home.urls')), #  this will create warning, we already use gview
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('route/', include('route.urls', namespace='nsroutes')), 
     path('getpost/', include('getpost.urls')),
     path('session/',include('session.urls')),
-    # path('gview/', include('gview.urls')),
+    path('gview/', include('gview.urls')),
+    path('hello/', include('hello.urls')),
 ]

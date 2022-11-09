@@ -22,4 +22,3 @@ def run():
         b, created = Breed.objects.get_or_create(name=row[1])
 
         c = Cat(nickname=row[0], breed=b, weight=row[2])
-        c.save()
