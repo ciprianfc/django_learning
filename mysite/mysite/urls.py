@@ -26,5 +26,6 @@ urlpatterns = [
     path('session/', include('session.urls')),
     path('gview/', include('gview.urls')),
     path('hello/', include('hello.urls')),
-    path('authz/', include('authz.urls', namespace='authz')),
+    path('authz/', include('authz.urls')),
+    path('form/', include('form.urls')),
 ]
