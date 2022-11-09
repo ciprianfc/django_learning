@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'bookone.apps.BookoneConfig',
     'cats.apps.CatsConfig',
     'hello.apps.HelloConfig',
-    'home.apps.HomeConfig',  
+    'home.apps.HomeConfig',
+    'authz.apps.AuthzConfig',  
 ]
 
 MIDDLEWARE = [
