@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.static import serve
 
 urlpatterns = [
     # this will create warning, we already use gview
@@ -28,4 +29,20 @@ urlpatterns = [
     path('hello/', include('hello.urls')),
     path('authz/', include('authz.urls')),
     path('form/', include('form.urls')),
+    path('autos/', include('autos.urls'))
+]
+
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_URL = 'static/'
+
+STATIC_ROOT = Path().joinpath(BASE_DIR,'home',STATIC_URL)
+# server the favinco
+urlpatterns += [
+    path('favicon.ico', serve, {
+        'path' : 'favicon.ico',
+        'document_root' : STATIC_ROOT,
+    })
 ]

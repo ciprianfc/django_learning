@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'hello.apps.HelloConfig',
     'home.apps.HomeConfig',
     'authz.apps.AuthzConfig',
-    'form.apps.FormConfig'
+    'form.apps.FormConfig',
+    'autos.apps.AutosConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = Path().joinpath(BASE_DIR,'home',STATIC_URL)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
