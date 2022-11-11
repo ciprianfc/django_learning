@@ -1,0 +1,12 @@
+<span style ="float: right;" >
+    ({{ article.updated_at}})
+    {% if article.owner == user %}
+        <a href="{% url 'myarts:article_update' article.id %}"></a>
+        <a href="{% url 'myarts:article_delete' article.id %}"></a> 
+    {% endif %}
+</span>
+<h1> {{ article.title }}</h1>
+<p>
+    {{ article.text }}
+</p>
+<p><a href="{% url 'myarts:all' %}">All articles</a></p>

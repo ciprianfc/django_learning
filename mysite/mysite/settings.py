@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'authz.apps.AuthzConfig',
     'form.apps.FormConfig',
     'autos.apps.AutosConfig',
+    'myarts.apps.MyartsConfig',
 ]
 
 MIDDLEWARE = [

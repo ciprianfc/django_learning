@@ -29,7 +29,8 @@ urlpatterns = [
     path('hello/', include('hello.urls')),
     path('authz/', include('authz.urls')),
     path('form/', include('form.urls')),
-    path('autos/', include('autos.urls'))
+    path('autos/', include('autos.urls')),
+    path('myarts/', include('myarts.urls')),
 ]
 
 from pathlib import Path
