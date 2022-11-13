@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     #extensions
     'django_extensions', #needed to run scripts
+    'crispy_forms',
+    'crispy_bootstrap5',
 
     #sample applications
     'route.apps.RouteConfig',
@@ -55,6 +57,7 @@ INSTALLED_APPS = [
     'form.apps.FormConfig',
     'autos.apps.AutosConfig',
     'myarts.apps.MyartsConfig',
+    'crispy.apps.CrispyConfig',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +144,7 @@ STATIC_ROOT = Path().joinpath(BASE_DIR,'home',STATIC_URL)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"

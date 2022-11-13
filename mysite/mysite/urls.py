@@ -31,6 +31,7 @@ urlpatterns = [
     path('form/', include('form.urls')),
     path('autos/', include('autos.urls')),
     path('myarts/', include('myarts.urls')),
+    path('crispy/', include('crispy.urls')),
 ]
 
 from pathlib import Path
