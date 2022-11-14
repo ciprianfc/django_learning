@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'autos.apps.AutosConfig',
     'myarts.apps.MyartsConfig',
     'crispy.apps.CrispyConfig',
+    'menu.apps.MenuConfig',
 ]
 
 MIDDLEWARE = [

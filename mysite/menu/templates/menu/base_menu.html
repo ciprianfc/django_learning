@@ -1,0 +1,69 @@
+{% extends 'base_bootstrap.html' %}
+{% block navbar %}
+{% comment %} https://getbootstrap.com/docs/5.0/components/navbar/ {% endcomment %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="{% url 'menu:main' %}" class="navbar-brand">{{ settings.APP_NAME }}</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                {% url 'menu:main' as xyz %}
+                <li class="nav-item">
+                    <a href="{% url 'menu:main' %}"
+                    {% if request.get_full_path == xyz %} 
+                        class="nav-link active" aria-current="page"
+                    {% else %}
+                        class="nav-link" 
+                    {% endif %}
+                    >Home</a>
+                </li>
+
+                {% url 'menu:page1' as xyz %}
+                <li class="nav-item">
+                    <a href="{% url 'menu:page1' %}"
+                    {% if request.get_full_path == xyz %} 
+                        class="nav-link active" aria-current="page"
+                    {% else %}
+                        class="nav-link" 
+                    {% endif %}
+                    >Page1</a>
+                </li>
+
+                {% url 'menu:page2' as xyz %}
+                <li class="nav-item">
+                    <a href="{% url 'menu:page2' %}"
+                    {% if request.get_full_path == xyz %} 
+                        class="nav-link active" aria-current="page"
+                    {% else %}
+                        class="nav-link" 
+                    {% endif %}
+                    >Page2</a>
+                </li>
+
+                {% url 'menu:page3' as xyz %}
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">DropDown</a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'menu:page3' %}">Page3</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{% url 'menu:page3' %}">Page3</a></li>
+                      </ul>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">   
+                            <li><a class="dropdown-item" href="{% url 'logout' %}?next={% url 'menu:main' %}">Logout</a></li>
+                        </ul>                 
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}?next={% url 'menu:main' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+{% endblock navbar %}

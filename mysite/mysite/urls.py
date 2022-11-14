@@ -32,6 +32,7 @@ urlpatterns = [
     path('autos/', include('autos.urls')),
     path('myarts/', include('myarts.urls')),
     path('crispy/', include('crispy.urls')),
+    path('menu/', include('menu.urls')),
 ]
 
 from pathlib import Path
