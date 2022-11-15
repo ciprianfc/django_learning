@@ -34,6 +34,7 @@ urlpatterns = [
     path('crispy/', include('crispy.urls')),
     path('menu/', include('menu.urls')),
     path('pics/', include('pics.urls')),
+    path('forums/', include('forums.urls')),
 ]
 
 from pathlib import Path

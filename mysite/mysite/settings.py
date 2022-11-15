@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'bookmany.apps.BookmanyConfig',
     'many.apps.ManyConfig',
     'pics.apps.PicsConfig',
+    'forums.apps.ForumsConfig',
 ]
 
 MIDDLEWARE = [
