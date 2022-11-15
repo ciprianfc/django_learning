@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     #extensions
     'django_extensions', #needed to run scripts
@@ -61,6 +62,7 @@ INSTALLED_APPS = [
     'menu.apps.MenuConfig',
     'bookmany.apps.BookmanyConfig',
     'many.apps.ManyConfig',
+    'pics.apps.PicsConfig',
 ]
 
 MIDDLEWARE = [
