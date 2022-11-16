@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     'pics.apps.PicsConfig',
     'forums.apps.ForumsConfig',
     'chat.apps.ChatConfig',
+    'favs.apps.FavsConfig',
+    'well.apps.WellConfig',
 ]
 
 MIDDLEWARE = [
