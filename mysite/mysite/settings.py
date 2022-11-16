@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'many.apps.ManyConfig',
     'pics.apps.PicsConfig',
     'forums.apps.ForumsConfig',
+    'chat.apps.ChatConfig',
 ]
 
 MIDDLEWARE = [

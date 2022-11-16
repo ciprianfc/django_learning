@@ -35,6 +35,7 @@ urlpatterns = [
     path('menu/', include('menu.urls')),
     path('pics/', include('pics.urls')),
     path('forums/', include('forums.urls')),
+    path('chat/', include('chat.urls'))
 ]
 
 from pathlib import Path
